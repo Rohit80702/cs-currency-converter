@@ -2,7 +2,7 @@ import Freecurrencyapi from '@everapi/freecurrencyapi-js';
 
 const freecurrencyapi = new Freecurrencyapi('fca_live_pBl32eUKIikMZk0VahityxmIFmKtfmcjCWDIE7RI');
 
-export async function convertCurrency(fromCurrency, toCurrency, units) {
+export default async function convertCurrency(fromCurrency, toCurrency, units) {
     const result = await freecurrencyapi.latest({
         base_currency: fromCurrency,
         currencies: toCurrency
